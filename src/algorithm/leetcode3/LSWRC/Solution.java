@@ -1,7 +1,5 @@
 package algorithm.leetcode3.LSWRC;
 
-import org.w3c.dom.css.ElementCSSInlineStyle;
-
 public class Solution {
 	public static int lengthOfLogestSubstring(String s) {
 		int maxl = 0;

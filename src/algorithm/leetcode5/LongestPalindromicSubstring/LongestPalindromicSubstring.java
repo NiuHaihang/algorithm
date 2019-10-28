@@ -11,7 +11,7 @@ public class LongestPalindromicSubstring {
 				sb.append("#");
 			}
 			int p[] = new int[sb.length()];
-			int mx = 0, id = 0, resLen = 0, resCenter = 0;
+			int mx = 0, id = 0, resLen = 0, resCenter = 0;//resLen是待求回文子串的半径，resCenter是待求回文子串的中心位置
 			for(int j = 1; j < sb.length(); j++) {
 				p[j] = mx > j ? Math.min(p[2 * id - j], mx - j) : 1;
 				while(((j + p[j]) < sb.length()) && ((j - p[j]) >= 0) && (sb.charAt(j + p[j]) == sb.charAt(j - p[j]))) ++p[j];
