@@ -2,9 +2,10 @@ package algorithm.leetcode;
 
 public class M36isValidSudoku {
 	public boolean isValidSudoku(char[][] board) {
-		int[] row=new int[] {0,0,0,0,0,0,0,0,0,0};
-		int[] column=new int[] {0,0,0,0,0,0,0,0,0,0};
+//		int[] row=new int[] {0,0,0,0,0,0,0,0,0,0};
+//		int[] column=new int[] {0,0,0,0,0,0,0,0,0,0};
 		for(int i=0;i<9;i++) {//判断每一列是否有重复元素
+			int[] column=new int[] {0,0,0,0,0,0,0,0,0,0};
 			for(int j=0;j<9;j++) {
 				if(board[i][j]=='.') continue;
 				column[board[i][j]-'0']++;
@@ -15,6 +16,7 @@ public class M36isValidSudoku {
 			}
 		}
 		for(int i=0;i<9;i++) {
+			int[] row=new int[] {0,0,0,0,0,0,0,0,0,0};
 			for(int j=0;j<9;j++) {
 				if(board[j][i]=='.') continue;
 				row[board[j][i]-'0']++;
@@ -35,6 +37,7 @@ public class M36isValidSudoku {
 	
 	
 	public boolean isValidSubsquare(char[][] subboard,int rowstart,int colstart) {
+		//System.out.println("第"+rowstart+"行;第"+colstart+"列");
 		int[] valid=new int[] {1,1,1,1,1,1,1,1,1,1};
 		for(int i=rowstart;i<rowstart+3;i++) {
 			for(int j=colstart;j<colstart+3;j++) {
@@ -43,7 +46,8 @@ public class M36isValidSudoku {
 			}
 		}
 		for(int i=1;i<10;i++) {
-			if(valid[i]<=0) return false;
+			System.out.println("valid"+i+"="+valid[i]);
+			if(valid[i]<0) return false;
 		}
 		return true;
 	}
