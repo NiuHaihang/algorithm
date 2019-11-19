@@ -27,7 +27,8 @@ public class H37solveSodoku {
 	public boolean solveSodoku(char[][] board,int cur,boolean[][] rowflag,boolean[][] colflag,boolean[][] blockflag,boolean[] curflag) {
 		if(cur>=81) return true;//一共有0-80个位置，当前位置为cur，当cur=81时表明前面的位置上都放了数字
 		if(curflag[cur]) {//当前位置已经有数字，直接往下一个位置放
-			solveSodoku(board,cur+1,rowflag,colflag,blockflag,curflag);
+			if(solveSodoku(board,cur+1,rowflag,colflag,blockflag,curflag))
+				return true;
 		}
 		else 
 			for(int i=0;i<9;i++) {//尝试从1-9中选一个合适的数字放进当前位置
