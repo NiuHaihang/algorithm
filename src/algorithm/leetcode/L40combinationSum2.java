@@ -40,4 +40,4 @@ public class L40combinationSum2 {
 		}
 	}
 }
-class ListComparator
+
