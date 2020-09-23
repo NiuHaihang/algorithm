@@ -59,7 +59,7 @@ public class AslistTest {
          * */
         
         System.out.println("段落四开始分割线------------------");
-        a_int[0]=5;
+        a_int[0]=4;
         foreachForBase(a_int_List);
         foreach(a_int);
 

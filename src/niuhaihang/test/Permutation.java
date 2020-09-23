@@ -3,6 +3,7 @@ package niuhaihang.test;
 import java.util.Arrays;
 
 public class Permutation {
+	int cnt = 0;
 	public void permutation(int[] nums) {
 		int[] P=nums.clone();
 		Arrays.sort(P);
@@ -11,6 +12,7 @@ public class Permutation {
 	}
 	public void print_permutation(int[] P,int[] A,int cur,int n) {
 		if(cur==n) {
+			cnt++;
 			System.out.println("--------------");
 			for(int i=0;i<n;i++) {
 				System.out.print(A[i]+" ");
@@ -37,8 +39,9 @@ public class Permutation {
 	}
 	
 	public static void main(String[] args) {
-		int[] a= {1,1,1,2,2,2};
+		int[] a= {4,8,6,9,7,2};
 		Permutation p=new Permutation();
 		p.permutation(a);
+		System.out.println(p.cnt);
 	}
 }

@@ -28,7 +28,7 @@ public class QuickSort {
 				System.out.println("第"+i+"个元素是"+nums[i]);
 			}*/
 		}
-		nums[low] = temp;
+		nums[high] = temp;
 		/*System.out.println(low);
 		for(int i = 0;i < nums.length; i++) {
 			System.out.println("第"+i+"个元素是"+nums[i]);
@@ -36,7 +36,7 @@ public class QuickSort {
 		return low;
 	}
 	public static void main(String args[]) {
-		int[] a = {0,0,0};
+		int[] a = {7,9,3,6,3,5,7};
 		
 		quickSort(a,0,a.length-1);
 		for(int i = 0; i < a.length; i++) {

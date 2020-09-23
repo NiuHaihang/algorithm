@@ -21,7 +21,7 @@ public class PostOderTree {
 				}
 				else {
 					p=s.pop();
-					System.out.println(p.id);
+					System.out.println(p.val);
 					r=p;
 					p=null;
 				}
@@ -30,7 +30,7 @@ public class PostOderTree {
 	}
 	
 	public static void main(String[] args) {
-		TreeNode[] node = new TreeNode[10];//以数组形式生成一棵完全二叉树
+		TreeNode[] node = new TreeNode[10];//浠ユ暟缁勫舰寮忕敓鎴愪竴妫靛畬鍏ㄤ簩鍙夋爲
 		for(int i = 0; i < 10; i++)
 		{
 			node[i] = new TreeNode(i);
@@ -46,13 +46,13 @@ public class PostOderTree {
 	}
 }
 class TreeNode{
-	int id;
+	int val;
 	TreeNode left;
 	TreeNode right;
 	
 	public TreeNode(int id) {
-		this.id = id;
-		// TODO 自动生成的构造函数存根
+		this.val = id;
+		// TODO 鑷姩鐢熸垚鐨勬瀯閫犲嚱鏁板瓨鏍�
 	}
 	
 }
