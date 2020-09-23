@@ -19,7 +19,7 @@ public class Permutation {
 		}
 
 			for(int i=0;i<n;i++)
-				if(i==0||P[i]!=P[i-1]){//向A[cur]填入各种P[j]
+				if(i==0||P[i]!=P[i-1]){
 					int temp1=0;
 					int temp2=0;
 					for(int j=0;j<cur;j++) {

@@ -45,8 +45,8 @@ public class Convert {
 	}
 	
 	public static void main(String args[]) {
-		//String s = "PAYPALISHIRING";
-		String s = "A";
+		String s = "PAYPALISHIRING";
+		//String s = "A";
 		String ans = convert(s, 2);
 		System.out.println(ans);
 	}
